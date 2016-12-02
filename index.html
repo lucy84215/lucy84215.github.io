@@ -93,10 +93,10 @@
     var up_x = 0;
     setInterval(function() {
         if (po_x - up_x > 20) {
-            l_m++;
+            l_m--;
             r_m = 0;
         } else if (po_x - up_x < -20) {
-            r_m++;
+            r_m--;
             l_m = 0;
         } else {
             // l_m = 0;
