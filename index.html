@@ -17,10 +17,16 @@
         background: #E3EF0F;
     }
     #video{
-		background-image:url(../1202test/image/%E4%BA%92%E5%8B%952.jpg);
 		top:0px;
 		left:0px;
 		position:absolute;
+		z-index:99;
+	}
+	#image{
+		top:0px;
+		left:0px;
+		position:absolute;
+		z-index:100;
 	}
     #myBox {
         width: 0px;
@@ -50,6 +56,7 @@
 <body>
     <div>
         <video id="video" width="800" height="600" preload="" autoplay loop muted="" controls src="blob:https://cainmaila.github.io/625db146-9800-4cb3-9a8f-d4d4fb939f13"></video>
+        <img id="image" src="../1202test/image/互動2.jpg">
     </div>
     <div id="myBox" style="display: none;">
     </div>
