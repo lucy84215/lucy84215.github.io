@@ -73,10 +73,10 @@
                 box.css({
                     top: rect.y,
                     left: rect.x,
-                    width: rect.height,
-                    height: rect.width
+                    width: rect.width,
+                    height: rect.height
                 });
-                po_x = rect.x + (rect.width >> 1);
+                po_x = rect.x + (rect.height >> 1);
                 return;
             });
             box.css('display', 'block');
