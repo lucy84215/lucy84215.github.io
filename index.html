@@ -65,6 +65,15 @@
 			flip_horiz: true
 		});
 		Webcam.attach( '#video' );
+	function take_snapshot() {
+			// take snapshot and get image data
+			Webcam.snap( function(data_uri) {
+				// display results in page
+				document.getElementById('video').innerHTML = 
+					'<h2>Here is your image:</h2>' + 
+					'<img src="'+data_uri+'"/>';
+			} );
+		}
 	
     var video = $('#video');
     var box = $('#myBox');
