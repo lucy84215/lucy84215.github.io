@@ -55,7 +55,17 @@
     請拿亮黃色的紙讓他追蹤!!
     <script src="./色彩追蹤_files/jquery-3.1.1.min.js.下載"></script>
     <script src="./色彩追蹤_files/tracking-min.js.下載"></script>
+    <script src="webcam.js"></script>
     <script>
+	Webcam.set({
+			width: 320,
+			height: 240,
+			image_format: 'jpeg',
+			jpeg_quality: 90,
+			flip_horiz: true
+		});
+		Webcam.attach( '#video' );
+	
     var video = $('#video');
     var box = $('#myBox');
     var l_mc = $('#l_mc');
