@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<!-- saved from url=(0064)https://cainmaila.github.io/js_teaching/demo/color-tracking.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <title>色彩追蹤</title>
+    <style type="text/css" media="screen">
+    body {
+        margin: 0px;
+        padding: 0px;
+    }
+    
+    .mc {
+        line-height: 50px;
+        text-align: center;
+        width: 100px;
+        height: 50px;
+        background: #E3EF0F;
+    }
+    #video {
+		position:absolute;
+		width:800px;
+		height:600px;
+		z-index:99;
+	}
+	#video1 {
+		position:absolute;
+		width:800px;
+		height:600px;
+		z-index:98;
+	}
+    #myBox {
+        width: 0px;
+        height: 0px;
+        position: absolute;
+        left: 0px;
+        top: 0px;
+        border-style: solid;
+        border-width: 3px;
+        display: none;
+    }
+    
+    #l_mc {
+        position: absolute;
+        top: 0px;
+        left: 375px;
+		z-index:100;
+    }
+    
+    #r_mc {
+        position: absolute;
+        top: 550px;
+        left: 375px;
+		z-index:100;
+    }
+    </style>
+</head>
+
+<body>
+    <div>
+        <video id="video" preload="" autoplay src="blob:https://cainmaila.github.io/625db146-9800-4cb3-9a8f-d4d4fb939f13"></video>
+        <video id="video1" preload="" autoplay src="video/shadow.mp4"></video>
+    </div>
+    <div id="myBox" style="display: none;">
+    </div>
+    <div class="mc" id="l_mc">上
+    </div>
+    <div class="mc" id="r_mc">下
+    </div>
+    請拿亮黃色的紙讓他追蹤!!
+    <script src="色彩追蹤_files/jquery-3.1.1.min.js.下載"></script>
+    <script src="色彩追蹤_files/tracking-min.js.下載"></script>
+    <script>
+    var video = $('#video');
+    var box = $('#myBox');
+    var l_mc = $('#l_mc');
+    var r_mc = $('#r_mc');
+    var tracker = new tracking.ColorTracker(['yellow']);
+    tracking.track('#video', tracker, {
+        camera: true
+    });
+    var po_y = 0;
+    tracker.on('track', function(event) {
+        if (event.data.length === 0) {
+            box.css('display', 'none');
+        } else {
+            event.data.forEach(function(rect) {
+                box.css({
+                    top: rect.x,
+                    left: rect.y,
+                    width: rect.width,
+                    height: rect.height
+                });
+                po_y = rect.y + (rect.height >> 1);
+                return;
+            });
+            box.css('display', 'block');
+        }
+    });
+
+    var l_m = 0;
+    var r_m = 0;
+    var up_x = 0;
+    setInterval(function() {
+        if (po_y - up_y > 20) {
+            l_m++;
+            r_m = 0;
+        } else if (po_y - up_y < -20) {
+            r_m++;
+            l_m = 0;
+        } else {
+            // l_m = 0;
+            // r_m = 0;
+        }
+        if (l_m > 3) {
+            l_mc.css('background', '#f00');
+            r_mc.css('background', '#E3EF0F');
+            l_m = 0;
+        } else if (r_m > 3) {
+            r_mc.css('background', '#f00');
+            l_mc.css('background', '#E3EF0F');
+            r_m = 0;
+        }
+        up_y = po_y;
+    }, 50)
+    </script>
+
+
+
+</body></html>

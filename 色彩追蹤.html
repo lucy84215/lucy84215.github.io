@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<!-- saved from url=(0064)https://cainmaila.github.io/js_teaching/demo/color-tracking.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <title>色彩追蹤</title>
+    <style type="text/css" media="screen">
+    body {
+        margin: 0px;
+        padding: 0px;
+    }
+    
+    .mc {
+        line-height: 100px;
+        text-align: center;
+        width: 50px;
+        height: 100px;
+        background: #E3EF0F;
+    }
+    
+    #myBox {
+        width: 0px;
+        height: 0px;
+        position: absolute;
+        left: 0px;
+        top: 0px;
+        border-style: solid;
+        border-width: 3px;
+        display: none;
+    }
+    
+    #l_mc {
+        position: absolute;
+        top: 200px;
+        left: 0px;
+    }
+    
+    #r_mc {
+        position: absolute;
+        top: 200px;
+        left: 750px;
+    }
+    </style>
+</head>
+
+<body>
+    <div>
+        <video id="video" width="800" height="600" preload="" autoplay="" loop="" muted="" controls="" src="blob:https://cainmaila.github.io/625db146-9800-4cb3-9a8f-d4d4fb939f13"></video>
+    </div>
+    <div id="myBox" style="display: none;">
+    </div>
+    <div class="mc" id="l_mc">左
+    </div>
+    <div class="mc" id="r_mc">右
+    </div>
+    請拿亮黃色的紙讓他追蹤!!
+    <script src="./色彩追蹤_files/jquery-3.1.1.min.js.下載"></script>
+    <script src="./色彩追蹤_files/tracking-min.js.下載"></script>
+    <script>
+    var video = $('#video');
+    var box = $('#myBox');
+    var l_mc = $('#l_mc');
+    var r_mc = $('#r_mc');
+    var tracker = new tracking.ColorTracker(['yellow']);
+    tracking.track('#video', tracker, {
+        camera: true
+    });
+    var po_x = 0;
+    tracker.on('track', function(event) {
+        if (event.data.length === 0) {
+            box.css('display', 'none');
+        } else {
+            event.data.forEach(function(rect) {
+                box.css({
+                    top: rect.y,
+                    left: rect.x,
+                    width: rect.height,
+                    height: rect.width
+                });
+                po_x = rect.x + (rect.width >> 1);
+                return;
+            });
+            box.css('display', 'block');
+        }
+    });
+
+    var l_m = 0;
+    var r_m = 0;
+    var up_x = 0;
+    setInterval(function() {
+        if (po_x - up_x > 20) {
+            l_m++;
+            r_m = 0;
+        } else if (po_x - up_x < -20) {
+            r_m++;
+            l_m = 0;
+        } else {
+            // l_m = 0;
+            // r_m = 0;
+        }
+        if (l_m > 3) {
+            l_mc.css('background', '#f00');
+            r_mc.css('background', '#E3EF0F');
+            l_m = 0;
+        } else if (r_m > 3) {
+            r_mc.css('background', '#f00');
+            l_mc.css('background', '#E3EF0F');
+            r_m = 0;
+        }
+        up_x = po_x;
+    }, 50)
+    </script>
+
+
+
+</body></html>
