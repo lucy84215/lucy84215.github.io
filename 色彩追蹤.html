@@ -1,8 +1,7 @@
 <!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
+<!-- saved from url=(0064)https://cainmaila.github.io/js_teaching/demo/color-tracking.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
     <title>色彩追蹤</title>
     <style type="text/css" media="screen">
     body {
@@ -11,11 +10,11 @@
     }
     
     .mc {
-        /*line-height: 50px;
-        text-align: center;*/
-        width: 300px;
-        height: 150px;
-        background:rgba(255,255,255,1.00);
+        line-height: 100px;
+        text-align: center;
+        width: 50px;
+        height: 100px;
+        background: #E3EF0F;
     }
     
     #myBox {
@@ -31,31 +30,31 @@
     
     #l_mc {
         position: absolute;
-        top: 0px;
-        left: 330px;
+        top: 200px;
+        left: 0px;
     }
     
     #r_mc {
         position: absolute;
-        top: 415px;
-        left: 330px;
+        top: 200px;
+        left: 750px;
     }
     </style>
 </head>
 
 <body>
     <div>
-        <video id="video" width="800" height="600" preload autoplay loop muted controls></video>
+        <video id="video" width="800" height="600" preload="" autoplay="" loop="" muted="" controls="" src="blob:https://cainmaila.github.io/625db146-9800-4cb3-9a8f-d4d4fb939f13"></video>
     </div>
-    <div id="myBox">
+    <div id="myBox" style="display: none;">
     </div>
-    <div class="mc" id="l_mc"><video width="300" height="150" controls><source src="互動1.mp4" type="video/mp4"></video>
+    <div class="mc" id="l_mc">左
     </div>
-    <div class="mc" id="r_mc"><video width="300" height="150" controls><source src="互動2.mp4" type="video/mp4"></video>
+    <div class="mc" id="r_mc">右
     </div>
     請拿亮黃色的紙讓他追蹤!!
-    <script src="../lib/jquery-3.1.1.min.js"></script>
-    <script src="../lib/tracking-min.js"></script>
+    <script src="./色彩追蹤_files/jquery-3.1.1.min.js.下載"></script>
+    <script src="./色彩追蹤_files/tracking-min.js.下載"></script>
     <script>
     var video = $('#video');
     var box = $('#myBox');
@@ -110,6 +109,7 @@
         up_x = po_x;
     }, 50)
     </script>
-</body>
 
-</html>
+
+
+</body></html>
