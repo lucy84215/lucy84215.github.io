@@ -130,3 +130,69 @@ span.onclick = function() { // esta es toda la funcion
 
   modal.style.display = "none"; // solo se cierra dandole display none 
 }
+
+// acedo al pop-up
+var modal = document.getElementById('myModal7');
+
+// voy a la imagen y la inserto en el modal
+var img = document.getElementById('myImg7');
+var modalImg = document.getElementById("img07");
+var captionText = document.getElementById("caption7");
+img.onclick = function(){
+    modal.style.display = "block";// lo hace visible
+    modalImg.src = this.src; // lo inserta desde el recurso osea le busca su url
+    captionText.innerHTML = this.alt; //usa su texto alt y lo inserta en el div
+}
+
+// va al elemento spam que cierra el pop-up
+var span = document.getElementsByClassName("close")[0];
+
+// cuando los usuario hacen click en el <span> (x), cierra el pop-up
+span.onclick = function() { // esta es toda la funcion
+
+  modal.style.display = "none"; // solo se cierra dandole display none 
+}
+
+// acedo al pop-up
+var modal = document.getElementById('myModal8');
+
+// voy a la imagen y la inserto en el modal
+var img = document.getElementById('myImg8');
+var modalImg = document.getElementById("img08");
+var captionText = document.getElementById("caption8");
+img.onclick = function(){
+    modal.style.display = "block";// lo hace visible
+    modalImg.src = this.src; // lo inserta desde el recurso osea le busca su url
+    captionText.innerHTML = this.alt; //usa su texto alt y lo inserta en el div
+}
+
+// va al elemento spam que cierra el pop-up
+var span = document.getElementsByClassName("close")[0];
+
+// cuando los usuario hacen click en el <span> (x), cierra el pop-up
+span.onclick = function() { // esta es toda la funcion
+
+  modal.style.display = "none"; // solo se cierra dandole display none 
+}
+
+// acedo al pop-up
+var modal = document.getElementById('myModal9');
+
+// voy a la imagen y la inserto en el modal
+var img = document.getElementById('myImg9');
+var modalImg = document.getElementById("img09");
+var captionText = document.getElementById("caption9");
+img.onclick = function(){
+    modal.style.display = "block";// lo hace visible
+    modalImg.src = this.src; // lo inserta desde el recurso osea le busca su url
+    captionText.innerHTML = this.alt; //usa su texto alt y lo inserta en el div
+}
+
+// va al elemento spam que cierra el pop-up
+var span = document.getElementsByClassName("close")[0];
+
+// cuando los usuario hacen click en el <span> (x), cierra el pop-up
+span.onclick = function() { // esta es toda la funcion
+
+  modal.style.display = "none"; // solo se cierra dandole display none 
+}
