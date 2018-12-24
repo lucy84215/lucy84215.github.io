@@ -8,7 +8,212 @@ body{
 	
 }
 @media screen and (min-width: 768px) and (max-width: 1199px){
-	
+	.header{
+	}
+	.text marquee{
+		font-size: 10em;
+		font-weight: 1000;
+		color: #3A456F;
+		width: 150%;
+		white-space:nowrap;
+		line-height: 1.3em;
+	}
+	.text{
+		width: 100%;
+		overflow-x: hidden;
+		overflow-y: hidden;
+	}
+	.text.{
+		
+	}
+	.self-photo{
+		width: 500px;
+		position: absolute;
+		transform: rotate(90deg);
+		left: -65px;
+		top: 75px;
+	}
+	.self-photo img{
+		width: 100%;
+	}
+	.site-header{
+		width: 100%;
+		height: 65px;
+		background-color: #3A456F;
+		position: fixed;
+		top: -65px;
+		transition: all 0.7s;
+	}
+	.site-header.activeScroll{
+		position: fixed;
+		top: 0px;
+		transition: all 0.7s;
+		-webkit-box-shadow: 0px 1px 5px #171C2D;
+		-moz-box-shadow: 0px 1px 5px #171C2D;
+		box-shadow: 0px 1px 5px #171C2D;
+		z-index: 99999;
+	}
+	.logo{
+		height: 65px;
+	}
+	.logo img{
+		height: 100%;
+		padding: 5px;
+	}
+	ul.menu-bar{
+		float: right;
+		margin-top: 15px;
+		margin-right: 10px;
+	}
+	ul.menu-bar li{
+		float: left;
+		list-style: none;
+		margin: 5px 15px;
+	}
+	ul.menu-bar li a{
+		color: #FFFFFF;
+		font-size: 1.3em;
+	}
+	ul.menu-bar li a:hover{
+		color: rgba(227,227,227,1.00);
+		text-decoration: none;
+		cursor: pointer;
+	}
+	.about-me{
+		background-color: #3A456F;
+		padding: 150px 0px 500px;
+		position: relative;
+	}
+	.about-me .about-text{
+		color: #FFFFFF;
+		font-size: 1.25em;
+	}
+	.about-me .about-text p{
+		margin-bottom: 5px;
+	}
+	.about-me .about-photo{
+		position: absolute;
+		width: 500px;
+		right: 25%;
+		bottom: 0px;
+	}
+	.about-me .about-photo img{
+		width: 100%;
+	}
+	.about-me .center-photo:hover{
+		cursor: pointer;
+	}
+	.about-me .about-photo .left-line{
+		position: absolute;
+		left: -300px;
+		width: 400px;
+		top: 0px;
+		transition: all 0.7s;
+	}
+	.about-me .about-photo .left-line.active{
+		position: absolute;
+		left: -250px;
+		width: 400px;
+		top: -20px;
+		transition: all 0.7s;
+	}
+	.about-me .about-photo .left-line img{
+		width: 100%;
+	}
+	.about-me .about-photo .right-line{
+		position: absolute;
+		width: 400px;
+		right: -300px;
+		top: -50px;
+		transition: all 0.7s;
+	}
+	.about-me .about-photo .right-line.active{
+		position: absolute;
+		width: 400px;
+		right: -250px;
+		top: -30px;
+		transition: all 0.7s;
+	}
+	.experience{
+		background-color: #FFFFFF;
+		padding: 150px 0px 500px;
+		position: relative;
+	}
+	.works{
+		background-color: #3A456F;
+		padding: 150px 0px 500px;
+		position: relative;
+		color: #FFFFFF;
+	}
+	.title{
+		position: relative;
+	}
+	.title .title-line{
+		position: absolute;
+		width: 150px;
+		height: 50px;
+		border: 1px solid;
+		top: 10px;
+		left: 8px;
+	}
+	.blue-line{
+		color: #3A456F;
+	}
+	.white-line{
+		color: #FFFFFF;
+	}
+	.title-blue{
+		background-color: #3A456F;
+		color: #FFFFFF;
+		padding: 5px 10px;
+		width: 150px;
+	}
+	.title-white{
+		background-color: #FFFFFF;
+		color: #3A456F;
+		width: 150px;
+		padding: 5px 10px;
+	}
+	.project-container{
+		width: 100%;
+		padding: 20px 0px;
+		margin: 30px auto;
+	}
+	.single-project{
+		width: 48%;
+		margin: 1%;
+		float: left;
+	}
+	.single-project h1.project-title{
+		padding: 25px 20px;    
+		font-size: 15px;
+		font-weight: bold;
+		text-align: center;
+		color: #FFFFFF;
+		font-family: "zh-title";
+	}
+	.single-project article{
+		padding: 10px;
+	}
+	.single-project article a {
+		display: block;
+		height: 100%;
+		height: auto;
+		width: 100%;
+	}
+	.project-container article div.image {
+		width: 100%;
+		overflow: hidden;
+		position: relative;
+	}
+	.project-container article div.image .inner {
+		width: 100%;
+		padding-bottom: 100%;
+		-webkit-transition: 0.4s cubic-bezier(0.7, 0, 0.3, 1);
+		-o-transition: 0.4s cubic-bezier(0.7, 0, 0.3, 1);
+		transition: 0.4s cubic-bezier(0.7, 0, 0.3, 1);
+		position: relative;
+	}
 }
 @media screen and (min-width: 1200px) and (max-width: 3000px){
 	.header{
