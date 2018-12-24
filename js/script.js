@@ -1,9 +1,9 @@
 // JavaScript Document
 $(window).on("scroll",function(){
-	if($(window).scrollTop()>50){
-		$(".nav").addClass("activeScroll");
+	if($(window).scrollTop()>20){
+		$(".site-header").addClass("activeScroll");
 	}else{
-		$(".nav").removeClass("activeScroll");
+		$(".site-header").removeClass("activeScroll");
 	}
 })
 
