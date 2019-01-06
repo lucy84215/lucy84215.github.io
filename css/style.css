@@ -134,10 +134,71 @@ body{
 		top: -30px;
 		transition: all 0.7s;
 	}
+	/*experience*/
 	.experience{
 		background-color: #FFFFFF;
-		padding: 150px 0px 500px;
+		padding: 150px 0px 600px;
 		position: relative;
+	}
+	.single-experience{
+		width: 270px;
+		/*height: 150px;*/
+		border: 1px solid #3A456F;
+		padding: 10px 0px;
+		color: #3A456F;
+		background-color: #FFFFFF;
+	}
+	.single-experience .experience-time{
+		width: 100%;
+		margin: 10px;
+	}
+	.single-experience .experience-content{
+		width: 100%;
+	}
+	.single-experience .experience-content p{
+		margin: 10px;
+		font-size: 1em;
+	}
+	.single-experience .experience-title{
+		width: 100%;
+	}
+	.single-experience .experience-title h3{
+		margin: 10px;
+		font-size: 1.3em;
+	}
+	.experience-time .experience-year{
+		font-size: 1.8em;
+		font-family:Consolas, "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", Monaco, "Courier New", "monospace";
+		font-weight: 800;
+	}
+	.experience-time .experience-month{
+		font-size: 1.1em;
+		font-weight: 700;
+		margin: 0px 5px; 
+		font-family:Consolas, "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", Monaco, "Courier New", "monospace";
+	}
+	#experience-1{
+		position: absolute;
+		top: 250px;
+		left: 10%;
+	}
+	#experience-2{
+		position: absolute;
+		top: 180px;
+		left: 50%;
+	}
+	#experience-3{
+		position: absolute;
+		top: 450px;
+		right: 10%;
+	}
+	#experience-4{
+		position: absolute;
+		top: 550px;
+		right: 50%;
+	}
+	#experience-5{
+		
 	}
 	.works{
 		background-color: #3A456F;
@@ -180,7 +241,7 @@ body{
 		margin: 30px auto;
 	}
 	.single-project{
-		width: 48%;
+		width: 31.3333%;
 		margin: 1%;
 		float: left;
 	}
@@ -213,6 +274,57 @@ body{
 		-o-transition: 0.4s cubic-bezier(0.7, 0, 0.3, 1);
 		transition: 0.4s cubic-bezier(0.7, 0, 0.3, 1);
 		position: relative;
+	}
+	/*contact me*/
+	.contact{
+		position: relative;
+	}
+	.contact-bg{
+		width: 100%;
+		overflow: hidden;
+	}
+	.contact-bg-text h3{
+		font-size: 10em;
+		font-weight: 1000;
+		color: #3A456F;
+		width: 150%;
+		white-space:nowrap;
+		line-height: 1.1em;
+		opacity: .7;
+	}
+	.contact .contact-text{
+		position: absolute;
+		width: 50%;
+		left: 25%;
+		top: 250px;
+		background-color: #FFFFFF;
+		padding: 50px 50px;
+		opacity: 0.8;
+		border-radius: 5px;
+		text-align: center;
+		color: #3A456F;
+  		box-shadow: 5px 5px 5px hsla(228,32%,48%,0.70);
+	}
+	.contact-text p{
+		font-size: 1.1em;
+	}
+	.contact-icon{
+		width: 100%;
+	}
+	.contact-icon i{
+		width: 50px; 
+		height: 50px;
+		padding: 18px;
+		border-radius: 50%;
+		color: #3A456F;
+		border: 1px solid #3A456F;
+	}
+	.contact-icon a:hover{
+		cursor: pointer;
+	}
+	.contact-icon a:hover i{
+		color: #191E31;
+		border: 1px solid #191E31;
 	}
 }
 @media screen and (min-width: 1200px) and (max-width: 3000px){
@@ -342,19 +454,116 @@ body{
 		top: -30px;
 		transition: all 0.7s;
 	}
+	/*experience*/
 	.experience{
 		background-color: #FFFFFF;
-		padding: 150px 0px 500px;
+		padding: 150px 0px 600px;
 		position: relative;
 	}
+	.single-experience{
+		width: 270px;
+		height: 150px;
+		border: 1px solid #3A456F;
+		color: #3A456F;
+		padding: 10px 0px;
+	}
+	.single-experience:hover{
+		cursor: pointer;
+	}
+	.single-experience .experience-time{
+		width: 100%;
+		margin: 10px;
+	}
+	.single-experience .experience-content{
+		width: 100%;
+	}
+	.single-experience .experience-content p{
+		margin: 10px;
+		font-size: 1em;
+	}
+	.single-experience .experience-title{
+		width: 100%;
+	}
+	.single-experience .experience-title h3{
+		margin: 10px;
+		font-size: 1.3em;
+	}
+	.experience-time .experience-year{
+		font-size: 1.8em;
+		font-family:Consolas, "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", Monaco, "Courier New", "monospace";
+		font-weight: 800;
+	}
+	.experience-time .experience-month{
+		font-size: 1.1em;
+		font-weight: 700;
+		margin: 0px 5px; 
+		font-family:Consolas, "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", Monaco, "Courier New", "monospace";
+	}
+	#experience-1{
+		position: absolute;
+		top: 250px;
+		left: 10%;
+	}
+	#experience-2{
+		position: absolute;
+		top: 180px;
+		left: 45%;
+	}
+	#experience-3{
+		position: absolute;
+		top: 450px;
+		right: 10%;
+		height: 190px;
+	}
+	#experience-4{
+		position: absolute;
+		top: 550px;
+		right: 45%;
+	}
+	#experience-5{
+		
+	}
+	.experience-hover{
+		background-color: #3A456F;
+		width: 400px;
+		height: 150px;
+		padding: 10px;
+		border-radius: 5px;
+  		box-shadow: 2px 2px 5px hsla(228,32%,48%,0.70);
+		position: relative;
+		margin-top: 30px;
+		margin-left: -30px;
+		display: none;
+	}
+	.experience-hover.active{
+		display: block;
+	}
+	.experience-hover .trangle{
+		position: absolute;
+		top: -30px;
+		left: 50px;
+		width: 0;
+		height: 0;
+		border-left: 15px solid transparent;
+		border-right: 15px solid transparent;
+		border-bottom: 30px solid #3A456F;
+	}
+	/*works*/
 	.works{
 		background-color: #3A456F;
-		padding: 150px 0px 500px;
+		padding: 150px 0px 0px;
 		position: relative;
 		color: #FFFFFF;
 	}
 	.title{
 		position: relative;
+	}
+	.title:hover .title-line{
+		position: absolute;
+		top: 0px;
+		left: 0px;
+		transition: all 0.3s;
+		cursor: pointer;
 	}
 	.title .title-line{
 		position: absolute;
@@ -363,6 +572,7 @@ body{
 		border: 1px solid;
 		top: 10px;
 		left: 8px;
+		transition: all 0.3s;
 	}
 	.blue-line{
 		color: #3A456F;
@@ -421,5 +631,63 @@ body{
 		-o-transition: 0.4s cubic-bezier(0.7, 0, 0.3, 1);
 		transition: 0.4s cubic-bezier(0.7, 0, 0.3, 1);
 		position: relative;
+	}
+	.project-container article div.image .inner:hover{
+		-moz-transform: scale(1.15);
+		-ms-transform: scale(1.15);
+		-o-transform: scale(1.15);
+		-webkit-transform: scale(1.15);
+		transform: scale(1.15);
+	}
+	/*contact me*/
+	.contact{
+		position: relative;
+	}
+	.contact-bg{
+		width: 100%;
+		overflow: hidden;
+	}
+	.contact-bg-text h3{
+		font-size: 10em;
+		font-weight: 1000;
+		color: #3A456F;
+		width: 150%;
+		white-space:nowrap;
+		line-height: 1.1em;
+		opacity: .7;
+	}
+	.contact .contact-text{
+		position: absolute;
+		width: 50%;
+		left: 25%;
+		top: 250px;
+		background-color: #FFFFFF;
+		padding: 50px 50px;
+		opacity: 0.8;
+		border-radius: 5px;
+		text-align: center;
+		color: #3A456F;
+  		box-shadow: 5px 5px 5px hsla(228,32%,48%,0.70);
+	}
+	.contact-text p{
+		font-size: 1.1em;
+	}
+	.contact-icon{
+		width: 100%;
+	}
+	.contact-icon i{
+		width: 50px; 
+		height: 50px;
+		padding: 18px;
+		border-radius: 50%;
+		color: #3A456F;
+		border: 1px solid #3A456F;
+	}
+	.contact-icon a:hover{
+		cursor: pointer;
+	}
+	.contact-icon a:hover i{
+		color: #191E31;
+		border: 1px solid #191E31;
 	}
 }
