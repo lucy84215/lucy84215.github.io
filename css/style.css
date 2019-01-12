@@ -64,7 +64,7 @@ body{
 @media screen and (max-width: 767px){
 	body{
 		width:100%;
-		overflow:hidden;
+		overflow-x:hidden;
 	}
 	.owl-carousel{
 		display: none!important;
