@@ -12,6 +12,10 @@ $('.single-experience').hover(function(){
 	$(this).children('.experience-hover').toggleClass('active');
 });
 
+$('.single-experience').click(function(){
+	$(this).children('.experience-hover').toggleClass('active');
+});
+
 $('.logo span a img').hover(function(){
     $('.logo span a img').attr('src','img/logo.png');
 },function(){
