@@ -269,6 +269,7 @@ body{
 		width: 300px;
 		height: 130px;
 		padding: 10px;
+		color: #FFFFFF;
 		border-radius: 5px;
   		box-shadow: 2px 2px 5px hsla(228,32%,48%,0.70);
 		position: relative;
@@ -626,8 +627,9 @@ body{
 	.experience-hover{
 		background-color: #3A456F;
 		width: 400px;
-		height: 150px;
+		height: 120px;
 		padding: 10px;
+		color: #FFFFFF;
 		border-radius: 5px;
   		box-shadow: 2px 2px 5px hsla(228,32%,48%,0.70);
 		position: relative;
@@ -1011,8 +1013,9 @@ body{
 	.experience-hover{
 		background-color: #3A456F;
 		width: 400px;
-		height: 150px;
+		height: 120px;
 		padding: 10px;
+		color: #FFFFFF;
 		border-radius: 5px;
   		box-shadow: 2px 2px 5px hsla(228,32%,48%,0.70);
 		position: relative;
