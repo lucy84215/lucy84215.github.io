@@ -264,7 +264,7 @@ body{
 	#experience-5{
 		
 	}
-	.experience-hover{
+	/*.experience-hover{
 		background-color: #3A456F;
 		width: 300px;
 		height: 130px;
@@ -291,7 +291,7 @@ body{
 		border-top: 15px solid transparent;
 		border-bottom: 15px solid transparent;
 		border-right: 20px solid #3A456F;
-	}
+	}*/
 	.works{
 		background-color: #3A456F;
 		padding: 50px 0px 50px;
