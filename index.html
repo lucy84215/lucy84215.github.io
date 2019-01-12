@@ -98,6 +98,7 @@
 				<span class="experience-content"><p>美編工讀生/排版/文宣品製作</p></span>
 				
 				<div class="experience-hover">
+					<span><p></p></span>
 					<span class="trangle"></span>
 				</div>
 			</div>
@@ -109,6 +110,13 @@
 				<span class="experience-content"><p>視覺設計/網頁設計/行銷實習生/文宣品製作</p></span>
 				
 				<div class="experience-hover">
+					<div class="owl-carousel owl-theme">
+						<div class="item"><img src="img/1.png"></div>
+						<div class="item"><img src="img/2.png"></div>
+						<div class="item"><img src="img/3.png"></div>
+						<div class="item"><img src="img/4.png"></div>
+						<div class="item"><img src="img/5.png"></div>
+					</div>
 					<span class="trangle"></span>
 				</div>
 			</div>
@@ -192,13 +200,37 @@
 				<article class="single-project">
 					<a href="" target="_blank">
 						<div class="image">
+							<div aria-label=" " class="inner" style="background: url(img/poster-02-01.jpg) center center / cover no-repeat;"></div>
+						</div> 
+						<h1 class="project-title">poster design</h1>
+					</a>
+				</article>
+				<article class="single-project">
+					<a href="https://www.youtube.com/watch?v=BzHHD_TqrEA" target="_blank">
+						<div class="image">
+							<div aria-label=" " class="inner" style="background: url(img/mg.png) center center / cover no-repeat;"></div>
+						</div> 
+						<h1 class="project-title">motion graphic design</h1>
+					</a>
+				</article>
+				<article class="single-project">
+					<a href="http://www.elaiis.com/" target="_blank">
+						<div class="image">
+							<div aria-label=" " class="inner" style="background: url(img/1547267606471.jpg) center center / cover no-repeat;"></div>
+						</div> 
+						<h1 class="project-title">elaiis 網頁製作</h1>
+					</a>
+				</article>
+				<article class="single-project">
+					<a href="" target="_blank">
+						<div class="image">
 							<div aria-label=" " class="inner" style="background: url(img/listenalien.png) center center / cover no-repeat;"></div>
 						</div> 
 						<h1 class="project-title">listen alien 網頁製作</h1>
 					</a>
 				</article>
 				<article class="single-project">
-					<a href="" target="_blank">
+					<a href="https://www.supermoto8.com/" target="_blank">
 						<div class="image">
 							<div aria-label=" " class="inner" style="background: url(img/moto8.png) center center / cover no-repeat;"></div>
 						</div> 
@@ -206,7 +238,7 @@
 					</a>
 				</article>
 				<article class="single-project">
-					<a href="" target="_blank">
+					<a href="http://w1.ecolefin.com/" target="_blank">
 						<div class="image">
 							<div aria-label=" " class="inner" style="background: url(img/ecolefin-2.png) center center / cover no-repeat;"></div>
 						</div> 
@@ -214,7 +246,7 @@
 					</a>
 				</article>
 				<article class="single-project">
-					<a href="" target="_blank">
+					<a href="http://kerstinflorian.com.tw/" target="_blank">
 						<div class="image">
 							<div aria-label=" " class="inner" style="background: url(img/KF.png) center center / cover no-repeat;"></div>
 						</div> 
@@ -257,5 +289,25 @@
 <script src="js/bootstrap.js"></script>
 <script src="js/script.js"></script>
 <script src="js/main.js"></script>
+<script>
+$('.owl-carousel').owlCarousel({
+    loop:true,
+    margin:10,
+	autoplay:true,
+    autoplayTimeout:2000,
+    autoplayHoverPause:true,
+    responsive:{
+        0:{
+            items:2
+        },
+        600:{
+            items:2
+        },
+        1000:{
+            items:3
+        }
+    }
+})
+</script>
 </body>
 </html>
