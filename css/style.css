@@ -73,6 +73,10 @@ a:hover{
     top: 0;
     float: left;
 }
+.timeline li .posted-date p{
+	color: #61768c;
+	font-weight: 600;
+}
 .timeline li.timeline-inverted .timeline-panel {
     float: right;
     text-align: left;
@@ -135,7 +139,7 @@ a:hover{
 	}
 	.timeline li .timeline-panel::before, .timeline li.timeline-inverted .timeline-panel::before {
     content: "";
-    top: 25px;
+    top: 48px;
     position: absolute;
     border-top: 10px solid transparent;
     border-bottom: 10px solid transparent;
@@ -818,4 +822,28 @@ a:hover{
 	background-position:center top;
 	background-repeat:no-repeat;
 	background-size: cover;
+}
+#zz-img{
+	background: url(../img/zz.png);
+	background-position:center top;
+	background-repeat:no-repeat;
+	background-size: cover;
+}
+#ma-img{
+	background: url(../img/ma.png);
+	background-position:center;
+	background-repeat:no-repeat;
+	background-size: contain;
+}
+#non-img{
+	background: url(../img/non.png);
+	background-position:center;
+	background-repeat:no-repeat;
+	background-size: contain;
+}
+#dragon-img{
+	background: url(../img/dragon.png);
+	background-position:center;
+	background-repeat:no-repeat;
+	background-size: contain;
 }
