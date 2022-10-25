@@ -1,8 +1,12 @@
 @charset "utf-8";
 /* CSS Document */
+html{
+	overflow-x: hidden!important;
+}
 body{
 	font-family: "sans-serif" , "微軟正黑體" ;
 	margin: 0px auto;
+	overflow-x: hidden;
 }
 .gray-text{
 	color: #bbbbbb;
@@ -15,92 +19,169 @@ a:hover{
 	text-decoration: none;
 	cursor: pointer;
 }
+
+.text marquee{
+	font-size: 10em;
+	font-weight: 1000;
+	color: #3A456F;
+	width: 150%;
+	white-space:nowrap;
+	line-height: 1.3em;
+}
+.text{
+	width: 100%;
+	overflow-x: hidden;
+	overflow-y: hidden;
+}
+.text.{
+
+}
+.self-photo{
+	width: 500px;
+	position: absolute;
+	transform: rotate(90deg);
+	left: -65px;
+	top: 75px;
+}
+.self-photo img{
+	width: 100%;
+}
+.site-header{
+	height: 65px;
+	background-color: #3A456F;
+	position: fixed;
+	top: -65px;
+	transition: all 0.7s;
+}
+.site-header.activeScroll{
+	overflow-x: hidden;
+    display: flex;
+	position: fixed;
+	width: 100vw;
+	top: 0px;
+	transition: all 0.7s;
+	-webkit-box-shadow: 0px 1px 5px #171C2D;
+	-moz-box-shadow: 0px 1px 5px #171C2D;
+	box-shadow: 0px 1px 5px #171C2D;
+	z-index: 99999;
+}
+.logo{
+	height: 65px;
+}
+.logo img{
+	height: 100%;
+	padding: 5px;
+}
+ul.menu-bar{
+	float: right;
+	margin-top: 15px;
+	margin-right: 10px;
+}
+ul.menu-bar li{
+	float: left;
+	list-style: none;
+	margin: 5px 15px;
+}
+ul.menu-bar li a{
+	color: #FFFFFF;
+	font-size: 1.3em;
+}
+ul.menu-bar li a:hover{
+	color: rgba(227,227,227,1.00);
+	text-decoration: none;
+	cursor: pointer;
+}
 /*=== Resume Section ===
 
 ---------------------------------------------------------
  *Resume Timeline
 -----------------------------------------------------------*/
-.resume:before {
-    content: "";
-    position: absolute;
-    top: -8px;
-    width: 10px;
-    height: 10px;
-    background-color: #e1e1e1;
-    left: 50%;
-    margin-left: -6px;
-    -webkit-transform: rotate(45deg);
-    -moz-transform: rotate(45deg);
-    -ms-transform: rotate(45deg);
-    -o-transform: rotate(45deg);
-    transform: rotate(45deg);
+
+@media (min-width: 767px){
+	
+.site-header{
+	width: 100%;
 }
-.timeline {
-    position: relative;
-    padding: 0;
-    list-style: none;
-}
-.timeline:before {
-    content: "";
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    width: 2px;
-    margin-left: -1.5px;
-    background-color: #e1e1e1;
-}
-.timeline li {
-    position: relative;
-    margin-bottom: 50px;
-    min-height: 50px;
-}
-.timeline li:before {
-    content: " ";
-    display: table;
-}
-.timeline li .posted-date {
-    position: relative;
-    text-align: center;
-    background-color: #fff;
-    left: 20px;
-}
-.timeline li .posted-date .month {
-    font-size: 18px;
-    line-height: 20px;
-    font-weight: 700;
-    display: block;
-    color: #2c3e50;
-    top: 0;
-    float: left;
-}
-.timeline li .posted-date p{
-	color: #61768c;
-	font-weight: 600;
-}
-.timeline li.timeline-inverted .timeline-panel {
-    float: right;
-    text-align: left;
-}
-.timeline li.timeline-inverted .timeline-panel:before {
-    right: auto;
-    left: -15px;
-    border-right-width: 15px;
-    border-left-width: 0;
-}
-.timeline-content {
-    padding: 5px 20px 0 20px;
-}
-.timeline-heading h3 {
-    font-size: 20px;
-    line-height: 28px;
-		margin: 0px;
-}
-.timeline-heading span{
-	color: #989898;
-	font-weight: 500;
-	font-size: 16px;
-}
-@media (min-width: 992px){
+	.resume:before {
+		content: "";
+		position: absolute;
+		top: -8px;
+		width: 10px;
+		height: 10px;
+		background-color: #e1e1e1;
+		left: 50%;
+		margin-left: -6px;
+		-webkit-transform: rotate(45deg);
+		-moz-transform: rotate(45deg);
+		-ms-transform: rotate(45deg);
+		-o-transform: rotate(45deg);
+		transform: rotate(45deg);
+	}
+	.timeline {
+		position: relative;
+		padding: 0;
+		list-style: none;
+	}
+	.timeline:before {
+		content: "";
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		width: 2px;
+		margin-left: -1.5px;
+		background-color: #e1e1e1;
+	}
+	.timeline li {
+		position: relative;
+		margin-bottom: 50px;
+		min-height: 50px;
+	}
+	.timeline li:before {
+		content: " ";
+		display: table;
+	}
+	.timeline li .posted-date {
+		position: relative;
+		text-align: center;
+		background-color: #fff;
+		left: 20px;
+	}
+	.timeline li .posted-date .month {
+		font-size: 18px;
+		line-height: 20px;
+		font-weight: 700;
+		display: block;
+		color: #2c3e50;
+		top: 0;
+		float: left;
+	}
+	.timeline li .posted-date p{
+		color: #61768c;
+		font-weight: 600;
+	}
+	.timeline li.timeline-inverted .timeline-panel {
+		float: right;
+		text-align: left;
+	}
+	.timeline li.timeline-inverted .timeline-panel:before {
+		right: auto;
+		left: -15px;
+		border-right-width: 15px;
+		border-left-width: 0;
+	}
+	.timeline-content {
+		padding: 5px 20px 0 20px;
+	}
+	.timeline-heading h3 {
+		font-size: 20px;
+		line-height: 28px;
+			margin: 0px;
+	}
+	.timeline-heading span{
+		color: #989898;
+		font-weight: 500;
+		font-size: 16px;
+	}
 	.timeline:before {
 	    left: 50%;
 	}
@@ -163,6 +244,122 @@ a:hover{
 	}
 }
 @media screen and (max-width: 767px){
+	.single-project h1.project-title {
+		padding: 10px;
+		font-size: 15px;
+		font-weight: bold;
+		text-align: center;
+		color: #FFFFFF;
+		font-family: "zh-title";
+	}
+	.works {
+		background-color: #3A456F;
+		padding: 10px 0px 30px;
+		position: relative;
+		color: #FFFFFF;
+	}
+	.project-container article div.image .inner {
+		width: 100%;
+		padding-bottom: 100%;
+		-webkit-transition: 0.4s cubic-bezier(0.7, 0, 0.3, 1);
+		-o-transition: 0.4s cubic-bezier(0.7, 0, 0.3, 1);
+		transition: 0.4s cubic-bezier(0.7, 0, 0.3, 1);
+		position: relative;
+	}
+	.project-container {
+		width: 100%;
+		display: flow-root;
+		padding: 10px 0px;
+		margin: 10px auto;
+	}
+	.single-project {
+		width: 48%;
+		margin: 1%;
+		float: left;
+	}
+	.project-container article div.image {
+		width: 100%;
+		overflow: hidden;
+		position: relative;
+	}
+	.container{
+		width: 100%;
+	}
+	.timeline:before{
+		left: 5%!important;
+	}
+	.timeline li .posted-date{
+		left: 15%!important;
+	}
+ul.menu-bar li{
+    font-size: smaller;
+    margin: 5px 10px;
+}
+ul.menu-bar {
+    float: right;
+    margin-top: 15px;
+    width: 80%;
+    margin-right: 10px;
+    padding-left: 0px;
+}
+.logo {
+    width: 20%;
+}
+	.about-me{
+		background-color: #3A456F;
+		padding: 30px 0px 50%;
+		position: relative;
+	}
+	.about-me .about-text{
+		color: #FFFFFF;
+		font-size: 1.25em;
+	}
+	.about-me .about-text p{
+		margin-bottom: 5px;
+	}
+	.about-me .about-photo{
+		position: absolute;
+		width: 50%;
+		right: 25%;
+		bottom: 0px;
+	}
+	.about-me .about-photo img{
+		width: 100%;
+	}
+	.about-me .center-photo:hover{
+		cursor: pointer;
+	}
+	.about-me .about-photo .left-line{
+		position: absolute;
+		left: -300px;
+		width: 400px;
+		top: 0px;
+		transition: all 0.7s;
+	}
+	.about-me .about-photo .left-line.active{
+		position: absolute;
+		left: -250px;
+		width: 400px;
+		top: -20px;
+		transition: all 0.7s;
+	}
+	.about-me .about-photo .left-line img{
+		width: 100%;
+	}
+	.about-me .about-photo .right-line{
+		position: absolute;
+		width: 400px;
+		right: -300px;
+		top: -50px;
+		transition: all 0.7s;
+	}
+	.about-me .about-photo .right-line.active{
+		position: absolute;
+		width: 400px;
+		right: -250px;
+		top: -30px;
+		transition: all 0.7s;
+	}
 	/*contact me*/
 		.contact{
 			position: relative;
@@ -220,74 +417,8 @@ a:hover{
 @media screen and (min-width: 768px) and (max-width: 1199px){
 	.header{
 	}
-	.text marquee{
-		font-size: 10em;
-		font-weight: 1000;
-		color: #3A456F;
-		width: 150%;
-		white-space:nowrap;
-		line-height: 1.3em;
-	}
-	.text{
+	.container{
 		width: 100%;
-		overflow-x: hidden;
-		overflow-y: hidden;
-	}
-	.text.{
-
-	}
-	.self-photo{
-		width: 500px;
-		position: absolute;
-		transform: rotate(90deg);
-		left: -65px;
-		top: 75px;
-	}
-	.self-photo img{
-		width: 100%;
-	}
-	.site-header{
-		width: 100%;
-		height: 65px;
-		background-color: #3A456F;
-		position: fixed;
-		top: -65px;
-		transition: all 0.7s;
-	}
-	.site-header.activeScroll{
-		position: fixed;
-		top: 0px;
-		transition: all 0.7s;
-		-webkit-box-shadow: 0px 1px 5px #171C2D;
-		-moz-box-shadow: 0px 1px 5px #171C2D;
-		box-shadow: 0px 1px 5px #171C2D;
-		z-index: 99999;
-	}
-	.logo{
-		height: 65px;
-	}
-	.logo img{
-		height: 100%;
-		padding: 5px;
-	}
-	ul.menu-bar{
-		float: right;
-		margin-top: 15px;
-		margin-right: 10px;
-	}
-	ul.menu-bar li{
-		float: left;
-		list-style: none;
-		margin: 5px 15px;
-	}
-	ul.menu-bar li a{
-		color: #FFFFFF;
-		font-size: 1.3em;
-	}
-	ul.menu-bar li a:hover{
-		color: rgba(227,227,227,1.00);
-		text-decoration: none;
-		cursor: pointer;
 	}
 	.about-me{
 		background-color: #3A456F;
@@ -346,12 +477,12 @@ a:hover{
 	}
 	.experience{
 		background-color: #FFFFFF;
-		padding: 150px 0px 100px;
+		padding: 50px 0px 100px;
 		position: relative;
 	}
 	.works{
 		background-color: #3A456F;
-		padding: 150px 0px 500px;
+		padding: 50px 0px 500px;
 		position: relative;
 		color: #FFFFFF;
 	}
@@ -387,6 +518,7 @@ a:hover{
 	}
 	.project-container{
 		width: 100%;
+		display: flow-root;
 		padding: 20px 0px;
 		margin: 30px auto;
 	}
