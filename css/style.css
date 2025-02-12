@@ -1034,6 +1034,60 @@ ul.menu-bar {
 	background-repeat:no-repeat;
 	background-size: cover;
 }
+#PX-img-5{
+	background: url(../img/Px-5.jpg);
+	background-position:center top;
+	background-repeat:no-repeat;
+	background-size: cover;
+}
+#PX-img-6{
+	background: url(../img/Px-6.jpg);
+	background-position:center top;
+	background-repeat:no-repeat;
+	background-size: cover;
+}
+#PX-img-7{
+	background: url(../img/Px-7.jpg);
+	background-position:center top;
+	background-repeat:no-repeat;
+	background-size: cover;
+}
+#PX-img-8{
+	background: url(../img/Px-8.jpg);
+	background-position:center top;
+	background-repeat:no-repeat;
+	background-size: cover;
+}
+#PX-img-9{
+	background: url(../img/Px-9.jpg);
+	background-position:center top;
+	background-repeat:no-repeat;
+	background-size: cover;
+}
+#PX-img-10{
+	background: url(../img/Px-10.jpg);
+	background-position:center top;
+	background-repeat:no-repeat;
+	background-size: cover;
+}
+#PX-img-11{
+	background: url(../img/Px-11.jpg);
+	background-position:center top;
+	background-repeat:no-repeat;
+	background-size: cover;
+}
+#PX-img-12{
+	background: url(../img/Px-12.jpg);
+	background-position:center top;
+	background-repeat:no-repeat;
+	background-size: cover;
+}
+#img-8{
+	background: url(../img/APP.png);
+	background-position:center top;
+	background-repeat:no-repeat;
+	background-size: cover;
+}
 }
 
 @media screen and (max-width: 375px){
