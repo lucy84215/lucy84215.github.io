@@ -1010,6 +1010,31 @@ ul.menu-bar {
 	background-size: contain;
 }
 
+#PX-img-1{
+	background: url(../img/Px-1.jpg);
+	background-position:center top;
+	background-repeat:no-repeat;
+	background-size: cover;
+}
+#PX-img-2{
+	background: url(../img/Px-2.jpg);
+	background-position:center top;
+	background-repeat:no-repeat;
+	background-size: cover;
+}
+#PX-img-3{
+	background: url(../img/Px-3.jpg);
+	background-position:center top;
+	background-repeat:no-repeat;
+	background-size: cover;
+}
+#PX-img-4{
+	background: url(../img/Px-4.jpg);
+	background-position:center top;
+	background-repeat:no-repeat;
+	background-size: cover;
+}
+
 
 @media screen and (max-width: 375px){
 
